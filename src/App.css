@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   background: #508ac5;
-  color: #1f2937;
+  color: #d9160c;
 }
 
 .app {
@@ -35,5 +35,25 @@ body {
   padding: 20px;
   border: 1px solid #020a15;
   border-radius: 12px;
-  background: #220808;
+  background: #13155d;
+}
+
+.habit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #d7dde5;
+  border-radius: 12px;
+  background: #6e0404;
+}
+
+.habit-card.is-complete {
+  border-color: #78b87a;
+  background: #09dd26;
+}
+
+.habit-status {
+  font-weight: 700;
 }
