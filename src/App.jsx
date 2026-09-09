@@ -1,12 +1,20 @@
 import "./App.css";
-import HabitCard from "./components/HabitCard";
 import HabitList from "./components/HabitList";
+import Panel from "./components/Panel";
 import { initialHabits } from "./data/habits";
 
 export default function App() {
   const completedCount = initialHabits.filter(
     (habit) => habit.completed,
   ).length;
+
+  function handleShowDetails(habitId) {
+    const habit = initialHabits.find((item) => item.id === habitId);
+
+    if (habit) {
+      window.alert(`${habit.title} — Meta: ${habit.goal}`);
+    }
+  }
 
   return (
     <main className="app">
@@ -18,8 +26,12 @@ export default function App() {
         </p>
       </header>
 
-      <HabitList habits={initialHabits} />
+      <Panel title="Hábitos de hoje">
+        <HabitList
+          habits={initialHabits}
+          onShowDetails={handleShowDetails}
+        />
+      </Panel>
     </main>
   );
 }
-

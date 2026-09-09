@@ -46,7 +46,7 @@ body {
   padding: 20px;
   border: 1px solid #d7dde5;
   border-radius: 12px;
-  background: #6e0404;
+  background: #110101;
 }
 
 .habit-card.is-complete {
@@ -56,4 +56,25 @@ body {
 
 .habit-status {
   font-weight: 700;
+}
+
+.panel {
+  overflow: hidden;
+  border: 1px solid #020b18;
+  border-radius: 16px;
+  background: #c40505;
+  color: #ffffff; 
+}
+
+.panel-header,
+.panel-content {
+  padding: 20px;
+}
+
+.panel-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.panel-header h2 {
+  margin: 0;
 }
