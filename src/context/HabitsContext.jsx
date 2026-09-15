@@ -28,6 +28,10 @@ export function HabitsProvider({ children }) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(habits));
   }, [habits]);
 
+  useEffect(() => {
+    document.title = `${completedCount} de ${habits.length} hábitos concluídos`;
+  }, [completedCount, habits.length]);
+
   function addHabit(newHabit) {
     setHabits((current) => [...current, newHabit]);
   }
