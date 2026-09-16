@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { HabitsContext } from "../context/HabitsContext";
 
-export default function HabitForm() {
+export default function HabitForm({ onSuccess }) {
   const habitsContext = useContext(HabitsContext);
 
   const [form, setForm] = useState({ title: "", goal: "" });
@@ -41,6 +41,7 @@ export default function HabitForm() {
 
     setForm({ title: "", goal: "" });
     setError("");
+    onSuccess?.();
   }
 
   return (

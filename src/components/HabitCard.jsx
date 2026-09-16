@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function HabitCard({
   id,
   title,
@@ -10,8 +12,8 @@ export default function HabitCard({
       <div>
         <h2>{title}</h2>
         <p>Meta: {goal}</p>
+        <Link to={`/habitos/${id}`}>Ver detalhes</Link>
       </div>
-
       <button type="button" onClick={() => onToggle(id)}>
         {completed ? "Desmarcar" : "Concluir"}
       </button>
